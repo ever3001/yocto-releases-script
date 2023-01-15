@@ -1,0 +1,37 @@
+[project]
+name = "yocto_releases"
+version = "0.0.1"
+description = "A Python module to get the Yocto Project releases from the Yocto Project website"
+readme = "README.md"
+requires-python = ">=3.7"
+license = {file = "LICENSE"}
+keywords = ["yocto"]
+authors = [
+  { name="Ever ATILANO", email="ever.atilano3001@gmail.com" },
+  { name="Amaury Derigny", email="author@example.com" },
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+  'requests',
+  'html_to_json'
+]
+
+[project.urls]
+"Homepage" = "https://github.com/ever3001/yocto-releases-script"
+"Source" = "https://github.com/ever3001/yocto-releases-script"
+
+[project.scripts]
+yocto_rel = "yocto_releases:main"
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+exclude = ["yocto_releases.tests*"]
